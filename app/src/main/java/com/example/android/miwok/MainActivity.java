@@ -21,6 +21,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +35,17 @@ public class MainActivity extends AppCompatActivity {
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
 
-        // Set a click listener on that View
+        /* Set a click listener on that View for toast message
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Toast.makeText(view.getContext(), "Opens List Option", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        */
+        //Set a click listener on that View
         numbers.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
@@ -95,4 +106,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 }
