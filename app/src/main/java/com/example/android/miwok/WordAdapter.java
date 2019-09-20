@@ -38,12 +38,26 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         Word local_word = getItem(position);
-        ImageView image_icon = (ImageView) listItemView.findViewById(R.id.image_view);
-        image_icon.setImageResource(local_word.getImageResourceId());
+
+
+
         TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
         defaultTextView.setText(local_word.getDefaultTranslation());
+
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         miwokTextView.setText(local_word.getMiwokTranslation());
+
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
+
+        if (local_word.hasImage()) {
+            // If an image is available, display the provided image based on the resource ID
+            imageView.setImageResource(local_word.getImageResourceId());
+            // Make sure the view is visible
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            // Otherwise hide the ImageView (set visibility to GONE)
+            imageView.setVisibility(View.GONE);
+        }
 
         return listItemView;
     }

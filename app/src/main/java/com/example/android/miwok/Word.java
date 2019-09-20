@@ -7,7 +7,11 @@ public class Word {
     /** Miwok translation for the word */
     private String mMiwokTranslation;
 
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+
+    /** Constant value that represents no image was provided for this word */
+    private static final int NO_IMAGE_PROVIDED = -1;
+
     /**
      * Create a new Word object.
      *
@@ -38,7 +42,11 @@ public class Word {
     public String getMiwokTranslation() {
         return mMiwokTranslation;
     }
+
     public int getImageResourceId(){
         return mImageResourceId;
+    }
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
