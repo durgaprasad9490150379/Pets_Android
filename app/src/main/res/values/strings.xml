@@ -27,7 +27,7 @@
 
 
     <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
-    <string name="category_PetTypes">PET TYPES</string>
+    <string name="category_PetTypes">PET TYPES.</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_owner_Add">Add</string>
