@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class WordAdapter extends ArrayAdapter<Word> {
+public class WordAdapter extends ArrayAdapter<Owner> {
     /** Resource ID for the background color for this list of words */
     private int mColorResourceId;
 
@@ -23,7 +23,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
      * @param words is the list of {@link Word}s to be displayed.
      * @param colorResourceId is the resource ID for the background color for this list of words
      */
-    public WordAdapter(Context context, ArrayList<Word> words, int colorResourceId) {
+    public WordAdapter(Context context, ArrayList<Owner> words, int colorResourceId) {
         super(context, 0, words);
         mColorResourceId = colorResourceId;
     }
@@ -46,21 +46,30 @@ public class WordAdapter extends ArrayAdapter<Word> {
                     R.layout.list_item, parent, false);
         }
 
-        Word local_word = getItem(position);
+        Owner owner_object = getItem(position);
 
 
 
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
-        defaultTextView.setText(local_word.getDefaultTranslation());
+        TextView NameTextView = (TextView) listItemView.findViewById(R.id.name);
+        NameTextView.setText(owner_object.getName());
 
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
-        miwokTextView.setText(local_word.getMiwokTranslation());
+        TextView AddrTextView = (TextView) listItemView.findViewById(R.id.address);
+        AddrTextView.setText(owner_object.getAddress());
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
 
-        if (local_word.hasImage()) {
+        TextView CityTextView = (TextView) listItemView.findViewById(R.id.city);
+        CityTextView.setText(owner_object.getCity());
+
+        TextView PhnTextView = (TextView) listItemView.findViewById(R.id.telephone);
+        PhnTextView.setText(owner_object.getTelephone());
+
+        TextView PetTextView = (TextView) listItemView.findViewById(R.id.pets);
+        PetTextView.setText(owner_object.getPet());
+
+        if (owner_object.hasImage()) {
             // If an image is available, display the provided image based on the resource ID
-            imageView.setImageResource(local_word.getImageResourceId());
+            imageView.setImageResource(owner_object.getImageResourceId());
             // Make sure the view is visible
             imageView.setVisibility(View.VISIBLE);
         } else {

@@ -36,7 +36,7 @@ public class OwnerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(OwnerActivity.this, NumbersActivity.class);
+                Intent numbersIntent = new Intent(OwnerActivity.this, OwnerActionsActivity.class);
 
                 // Start the new activity
                 startActivity(numbersIntent);

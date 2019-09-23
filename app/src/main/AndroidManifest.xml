@@ -41,7 +41,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".NumbersActivity"
+            android:name=".OwnerActionsActivity"
             android:label="@string/category_owner_list"
             android:parentActivityName=".OwnerActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
