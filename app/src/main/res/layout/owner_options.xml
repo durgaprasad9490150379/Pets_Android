@@ -23,28 +23,28 @@
     tools:context="com.example.android.miwok.MainActivity">
 
     <TextView
-        android:id="@+id/owners"
+        android:id="@+id/owner_post"
         style="@style/CategoryStyle"
         android:background="@color/category_numbers"
-        android:text="@string/category_Owners"
+        android:text="@string/category_owner_Add"
         />
 
     <TextView
-        android:id="@+id/veterinararians"
+        android:id="@+id/owner_put"
         style="@style/CategoryStyle"
         android:background="@color/category_family"
-        android:text="@string/category_Veterinararians" />
+        android:text="@string/category_owner_update" />
 
     <TextView
-        android:id="@+id/PetTypes"
+        android:id="@+id/owner_get"
         style="@style/CategoryStyle"
         android:background="@color/category_colors"
-        android:text="@string/category_PetTypes" />
+        android:text="@string/category_owner_list" />
 
     <TextView
-        android:id="@+id/Specialities"
+        android:id="@+id/owner_delete"
         style="@style/CategoryStyle"
         android:background="@color/category_phrases"
-        android:text="@string/category_Specialities" />
+        android:text="@string/category_owner_delete" />
 
 </LinearLayout>

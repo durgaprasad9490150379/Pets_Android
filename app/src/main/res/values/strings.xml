@@ -14,17 +14,29 @@
 -->
 <resources>
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">Miwok</string>
+    <string name="app_name">Pets</string>
 
     <!-- Category name for phrases [CHAR LIMIT=20] -->
-    <string name="category_phrases">Phrases</string>
+    <string name="category_Owners">OWNERS</string>
 
     <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
-    <string name="category_colors">Colors</string>
+    <string name="category_Veterinararians">VETERINARIANS</string>
+
+    <string name="category_Specialities">SPECIALITIES</string>
+
+
 
     <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
-    <string name="category_numbers">Numbers</string>
+    <string name="category_PetTypes">PET TYPES</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
-    <string name="category_family">Family Members</string>
+    <string name="category_owner_Add">Add</string>
+
+    <string name="category_owner_update">Update</string>
+
+    <string name="category_owner_list">List</string>
+
+    <string name="category_owner_delete">Delete</string>
+
+
 </resources>
