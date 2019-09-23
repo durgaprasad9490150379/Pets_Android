@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class WordAdapter extends ArrayAdapter<Owner> {
+public class OwnerAdapter extends ArrayAdapter<Owner> {
     /** Resource ID for the background color for this list of words */
     private int mColorResourceId;
 
@@ -23,7 +23,7 @@ public class WordAdapter extends ArrayAdapter<Owner> {
      * @param words is the list of {@link Word}s to be displayed.
      * @param colorResourceId is the resource ID for the background color for this list of words
      */
-    public WordAdapter(Context context, ArrayList<Owner> words, int colorResourceId) {
+    public OwnerAdapter(Context context, ArrayList<Owner> words, int colorResourceId) {
         super(context, 0, words);
         mColorResourceId = colorResourceId;
     }

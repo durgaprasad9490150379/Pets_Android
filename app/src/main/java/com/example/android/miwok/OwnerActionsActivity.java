@@ -35,20 +35,25 @@ public class OwnerActionsActivity extends AppCompatActivity {
         // Create an arrayList of words
 //        ArrayList<String> words = new ArrayList<String>();
 
-        ArrayList<Owner> records = new ArrayList<Owner>();
+//        ArrayList<Owner> records = new ArrayList<Owner>();
 
+
+        ArrayList<Owner> records = new ArrayList<Owner>();
+        records = OwnerUtils.extractOwnersList();
+
+    /*
         records.add(new Owner("Durga", "1-13-_B", "Bangalore", "9490150", "Dog"));
         records.add(new Owner("Veera", "1-13-_B", "Bangalore", "9490150", "Dog"));
         records.add(new Owner("Raja", "1-13-_B", "Bangalore", "9490150", "Dog"));
         records.add(new Owner("Nani", "1-13-_B", "Bangalore", "9490150", "Dog"));
         records.add(new Owner("Kumar", "1-13-_B", "Bangalore", "9490150", "Dog"));
 
+    */
 
 
 
 
-
-        WordAdapter adapter = new WordAdapter(this,  records, R.color.category_numbers);
+        OwnerAdapter adapter = new OwnerAdapter(this,  records, R.color.category_numbers);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
